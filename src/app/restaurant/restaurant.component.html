@@ -1,0 +1,16 @@
+<button routerLink="/dashboard" class="btn btn-primary">Go to dashboard</button>
+<div class="container">
+    <div class="resturant">
+        <div class="card" *ngFor="let d of data">
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="./assets/choko.jpg" alt="blog1">
+                </div>
+                <div class="col-md-6">
+                    <h4>{{d.name_en}}</h4>
+                    <p>{{d.id}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

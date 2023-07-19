@@ -1,0 +1,27 @@
+/* .col-md-8 ul li{
+    list-style: none;
+   align-items: center;
+}
+ .rest ul{
+    display: flex;
+}
+
+.rb-box-img img{
+    width: 110px;
+    margin-right: 30px;
+} */
+.container{
+    margin:2rem 0 0  20rem;
+}
+
+.col-md-2 img{
+    width: 120px;
+
+}
+.card{
+    text-align: center;
+    margin-top: 10px;
+    width: 40rem;
+}
+
+

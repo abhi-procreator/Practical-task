@@ -1,0 +1,22 @@
+
+<button routerLink="/dashboard" class="btn btn-primary">Go to dashboard</button>
+<div class="container">
+    <div class="resturant">
+        <div class="card" style="width: 28rem;" *ngFor="let d of data">
+            <img src="./assets/choko.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <h4>{{d.name_en}}</h4>
+                    <h4>{{d.id}}</h4>
+                  
+                </h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">Follow</a>&nbsp;&nbsp;&nbsp;
+                <a href="#" class="btn btn-info">Messege</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h1>{{Name}}</h1>

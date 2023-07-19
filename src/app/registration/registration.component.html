@@ -1,0 +1,60 @@
+<form [formGroup]="regisForm">
+    <h1>SignUp</h1>
+    <div class="form-group">
+        <label for="Name">Name</label>
+        <input type="text" name="Name" formControlName="Name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Name.errors }" />
+        <div *ngIf="submitted && f.Name.errors" class="invalid-feedback">
+            <div *ngIf="f.Name.errors['required']">Name is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Email">Email</label>
+        <input type="text" formControlName="Email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Email.errors }" />
+        <div *ngIf="submitted && f.Email.errors" class="invalid-feedback">
+            <div *ngIf="f.Email.errors['required']">Email is required</div>
+            <div *ngIf="f.Email.errors['minLength']">Email must be 5 character long</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="phone_number">Phone Number</label>
+        <input type="text" formControlName="phone_number" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.phone_number.errors }" />
+        <div *ngIf="submitted && f.phone_number.errors" class="invalid-feedback">
+            <div *ngIf="f.phone_number.errors['required']">Phone Number is required</div>
+            <div *ngIf="f.phone_number.errors['minLength'] || f.phone_number.errors['maxLength']">Phone Number must be 10 character long</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Password">Password</label>
+        <input type="password" formControlName="Password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Password.errors }" />
+        <div *ngIf="submitted && f.Password.errors" class="invalid-feedback">
+            <div *ngIf="f.Password.errors['required']">Password is required</div>
+            <div *ngIf="f.Password.errors['minLength']">Password must be 5 character long</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="confirm_password">Confirm Password</label>
+        <input type="password" formControlName="confirm_password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.confirm_password.errors }" />
+        <div *ngIf="submitted && f.confirm_password.errors" class="invalid-feedback">
+            <div *ngIf="f.confirm_password.errors['required']">Confirm Number is required</div>
+            <div *ngIf="f.confirm_password.errors['minLength'] || f.confirm_password.errors['maxLength']">Password must be 10 character long</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Country">Country</label>
+        <input type="number" formControlName="Country" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Country.errors }" />
+        <div *ngIf="submitted && f.Country.errors" class="invalid-feedback">
+            <div *ngIf="f.Country.errors['required']">Country is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="UserName">User Name</label>
+        <input type="text" formControlName="UserName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.UserName.errors }" />
+        <div *ngIf="submitted && f.UserName.errors" class="invalid-feedback">
+            <div *ngIf="f.UserName.errors['required']">User Name is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary" (click)="register()">Register</button>
+    </div>
+</form>
+
